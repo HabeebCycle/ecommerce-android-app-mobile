@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'util/constants.dart';
 import 'util/route.dart';
+import 'util/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,15 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
-        fontFamily: "Muli",
-        textTheme: const TextTheme(
-          bodyText1: TextStyle(color: kTextColor),
-          bodyText2: TextStyle(color: kTextColor),
-        ),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      theme: appTheme(),
       // home: const SplashScreen(),
       routes: routes,
       initialRoute: SPLASH_ROUTE,

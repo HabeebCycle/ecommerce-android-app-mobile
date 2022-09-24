@@ -68,7 +68,12 @@ class _BodyState extends State<Body> {
                       ),
                     ),
                     const Spacer(flex: 3),
-                    DefaultButton(label: "Continue", action: () => {print("HERE PRESSED")},),
+                    DefaultButton(
+                      label: "Continue",
+                      action: () => {
+                        Navigator.pushNamed(context, LOGIN_ROUTE)
+                      },
+                    ),
                     const Spacer(),
                   ],
                 ),
@@ -93,4 +98,3 @@ class _BodyState extends State<Body> {
     );
   }
 }
-
